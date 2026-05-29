@@ -133,6 +133,8 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+     max-width: 280px;
+    justify-content: center;
 }
 
 .btn-gold {
