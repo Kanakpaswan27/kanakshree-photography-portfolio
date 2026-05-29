@@ -1525,12 +1525,18 @@ footer {
 }
 /* 🔥 YOUR hero-bg.jpg BACKGROUND 🔥 */
 .hero-bg-image {
-   width:100%;
-    min-height:100%;
-    backgound size:contain;
-    backgound position:center;
-    backgound repeat:no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
 }
+
 @media(max-width:768px){
 
     .hero{
