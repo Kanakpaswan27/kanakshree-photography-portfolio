@@ -2609,3 +2609,102 @@ img{
     max-width:100%;
     height:auto;
 }
+/* ===== MOBILE RESPONSIVE FIX ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Images responsive */
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Main sections */
+section,
+.container,
+.hero,
+.review-section,
+.contact-section{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* MOBILE VIEW */
+@media(max-width:768px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav{
+        width: 100%;
+        padding: 12px 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Hero section */
+    .hero{
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Buttons */
+    button,
+    .btn{
+        width: 90%;
+        max-width: 300px;
+    }
+
+    /* Cards / boxes */
+    .card,
+    .service-card,
+    .review-card{
+        width: 100% !important;
+        margin: 15px 0 !important;
+    }
+
+    /* Review section */
+    .reviews-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* Remove extra left-right spacing */
+    *{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Text sizes */
+    h1{
+        font-size: 32px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+}
