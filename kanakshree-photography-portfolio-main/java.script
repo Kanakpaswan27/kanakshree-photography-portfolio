@@ -1,0 +1,129 @@
+// 🔥 WHATSAPP CHATBOT FUNCTIONS 🔥
+function toggleChat() {
+    const chatBox = document.getElementById('chatBox');
+    chatBox.classList.toggle('active');
+    console.log('Chat toggled!'); // Debug check
+}
+
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+}
+
+function sendMessage() {
+    const input = document.getElementById('messageInput');
+    const message = input.value.trim();
+    if (!message) return;
+    
+    // User ka message
+    const messages = document.getElementById('messages');
+    const userDiv = document.createElement('div');
+    userDiv.className = 'message user-message';
+    userDiv.innerHTML = `<p>${message}</p>`;
+    messages.appendChild(userDiv);
+    
+    // Input clear
+    input.value = '';
+    
+    // Auto scroll
+    messages.scrollTop = messages.scrollHeight;
+    
+    // Bot reply
+    setTimeout(() => {
+        const botReplies = [
+            "Perfect! Wedding shoot ya passport photos? 💍📸",
+            "Batao kab ka event hai? Date check karte hain.",
+            "Great! Direct WhatsApp karo: +91-8750686771",
+            "Thanks! 30 minute mein call aayega 📞✅"
+        ];
+        const botDiv = document.createElement('div');
+        botDiv.className = 'message bot-message';
+        botDiv.innerHTML = `<p>${botReplies[Math.floor(Math.random() * botReplies.length)]}</p>`;
+        messages.appendChild(botDiv);
+        messages.scrollTop = messages.scrollHeight;
+    }, 800);
+}
+
+// Chatbot auto-open after 10 seconds (optional)
+setTimeout(() => {
+    if (!document.getElementById('chatBox').classList.contains('active')) {
+        console.log('Auto-opening chat...');
+    }
+}, 10000);
+<script>
+<!-- JavaScript for WhatsApp Notification -->
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const eventName = document.getElementById('eventName').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const phone = document.getElementById('phone').value;
+    const guests = document.getElementById('guests').value;
+    const message = document.getElementById('message').value;
+    
+    // Create WhatsApp message
+    const whatsappMessage = `*New Event Booking Request*%0A%0A` +
+        `👤 Name: ${name}%0A` +
+        `🎉 Event: ${eventName}%0A` +
+        `📅 Date: ${date}%0A` +
+        `⏰ Time: ${time}%0A` +
+        `📱 Phone: ${phone}%0A` +
+        `👥 Guests: ${guests || 'Not specified'}%0A` +
+        `💬 Message: ${message || 'None'}`;
+    
+    // Replace with your phone number (with country code, no +)
+    const phoneNumber = '8750686771';
+    
+    // Open WhatsApp
+    window.open(`https://wa.me/${8750686771}?text=${whatsappMessage}`, '_blank');
+    
+    alert('Thank you! WhatsApp open ho jayega. Wahan message send karein.');
+});
+</script>
+
+</body>
+</html>
+function bookNowWhatsApp() {
+    // Apna phone number (country code ke saath, + ke bagair)
+    const phoneNumber = '918750686771';
+    
+    // Message jo WhatsApp mein aayega
+    const message = `*📸 Kanak Shri Photography - Booking Request*%0A%0A` +
+        `Hello! I want to book a photoshoot.%0A%0A` +
+        `Please contact me for more details.%0A%0A` +
+        `Sent from website`;
+    
+    // WhatsApp open karega
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+}
+<!-- JavaScript for WhatsApp -->
+<script>
+function bookNowWhatsApp() {
+    const phoneNumber = '918750686771';
+    
+    const message = `*📸 Kanak Shri Photography - Booking Request*%0A%0A` +
+        `Hello! I want to book a photoshoot.%0A%0A` +
+        `Please contact me for more details.%0A%0A` +
+        `Sent from website`;
+    
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    
+    window.open(url, '_blank');
+}
+</script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("navMenu");
+
+    hamburger.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+
+});
